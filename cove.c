@@ -56,8 +56,13 @@ int main(int argc, char const *argv[]) {
         perror("Error opening file");
         return 1;
     }
-
+    
     // TODO: process file
+    
+    // read and print file just in case
+    for (size_t i = 0; i != EOF; i++) {
+        printf(fgetc(file));
+    }
 
     fclose(file);
     return 0;
